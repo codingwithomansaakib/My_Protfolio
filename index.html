@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">👨‍💻 Oman Saakib</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="cerficate.html">My Certificates</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+            </ul>
+            <div class="nav-buttons">
+                
+                <!-- 🌗 Theme Toggle Button -->
+                <button id="theme-toggle" class="btn theme-toggle">🌙</button>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay" data-aos="fade-up">
+            <h1>Welcome to Oman Saakib</h1>
+            <h2><span id="typing"></span></h2>
+            <p>I build full-stack applications, automate tasks, and solve real-world problems with code.</p>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn">View Projects</a>
+                <a href="#contact" class="btn btn-light">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2 data-aos="fade-right">Projects</h2>
+        <div class="project-grid">
+            <div class="project-card" data-aos="zoom-in">
+                <h3>Local Connect Service</h3>
+                <p>Built using HTML, CSS, JavaScript, and nodejs.</p>
+            </div>
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                <h3>Hotel management System</h3>
+                <p>I am using html,css , javascript and Face Recognition for Booking Verification system. </p>
+            </div>
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Portfolio Website</h3>
+                <p>This responsive personal website with AOS and dark mode.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 data-aos="fade-left">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item" data-aos="flip-left">HTML</div>
+            <div class="skill-item" data-aos="flip-left" data-aos-delay="100">CSS</div>
+            <div class="skill-item" data-aos="flip-left" data-aos-delay="200">JavaScript</div>
+            <div class="skill-item" data-aos="flip-left" data-aos-delay="300">python</div>
+            <div class="skill-item" data-aos="flip-left" data-aos-delay="400">Node.js</div>
+            <div class="skill-item" data-aos="flip-left" data-aos-delay="500">MongoDB</div>
+            <div class="skill-item" data-aos="flip-left" data-aos-delay="500">Java</div>
+            <div class="skill-item" data-aos="flip-left" data-aos-delay="500">Sql</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 data-aos="fade-up">Contact Me</h2>
+        <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <p>&copy; 2025 MyPortfolio. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.linkedin.com/in/oman-saakib-7404b0255/" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/codingwithomansaakib" target="_blank">GitHub</a> |
+        <a href="https://www.instagram.com/oman_saakib07/" target="_blank">Instagram</a>
+    </div>
+</footer>
+
+
+    <!-- Scripts -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

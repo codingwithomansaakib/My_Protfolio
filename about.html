@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+  <style>
+    :root {
+      --bg-color: #f0f0f0;
+      --text-color: #333;
+      --primary: #4caf50;
+      --card-bg: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #f9f9f9;
+      --card-bg: #1e1e1e;
+      --shadow: rgba(255, 255, 255, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background: var(--card-bg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+    }
+
+    .navbar ul li a:hover {
+      color: var(--primary);
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .about-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--card-bg);
+      box-shadow: 0 4px 10px var(--shadow);
+      border-radius: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-container img {
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px var(--shadow);
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .about-text ul {
+      padding-left: 1rem;
+      margin-top: 1rem;
+    }
+
+    .about-text ul li {
+      margin-bottom: 0.7rem;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--card-bg);
+      color: var(--text-color);
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .about-container img {
+        width: 100%;
+        max-width: 300px;
+        align-self: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">👨‍💻 Oman Saakib</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certificate.html">Certificate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <button id="theme-toggle" class="btn theme-toggle">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="about-container">
+    <img src="my image.jpg" alt="Oman Saakib Photo" />
+    <div class="about-text">
+      <h1>About Me</h1>
+      <p>Hello! I'm <strong>Oman Saakib</strong>, currently pursuing a <strong>B.Tech in Computer Science
+          Engineering</strong> with a specialization in <strong>Artificial Intelligence and Machine Learning</strong>.
+        I'm a <strong>3rd-year student at KR Mangalam University</strong>.</p>
+
+      <p>I have a strong passion for technology, programming, and problem-solving. In addition to my academic interests,
+        I'm also very enthusiastic about exploring <strong>new places and discovering new things</strong>.</p>
+
+      <p>I constantly think of <strong>innovative startup ideas</strong> and enjoy building real-world projects. Below
+        are two major website projects I’m currently working on:</p>
+
+      <ul>
+        <li><strong>1. Local Connect Service:</strong> A platform where people can find nearby service providers like
+          <strong>plumbers, electricians, carpenters, home tutors</strong>, etc., by searching using their
+          <strong>pincode</strong>. It connects local customers with verified professionals.
+        </li>
+        <li><strong>2. Safe Bihar:</strong> A safety-focused application designed to protect people from crimes like
+          <strong>kidnapping, murder, and theft</strong>. It features an emergency <strong>"Danger Button"</strong>
+          that, when pressed, sends the person’s <strong>location, name, and phone number</strong> directly to nearby
+          police authorities for immediate help.
+        </li>
+      </ul>
+
+      <p>These projects reflect my vision to use technology for solving real problems and improving lives.</p>
+
+      <p>My mission is to use technology to solve real-world challenges and build solutions that help society.</p>
+    </div>
+
+
+    </div>
+  </main>
+
+  <footer>
+
+    <p>&copy; 2025 Oman Saakib. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/oman-saakib-7404b0255/" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/codingwithomansaakib" target="_blank">GitHub</a> |
+      <a href="https://www.instagram.com/oman_saakib07/" target="_blank">Instagram</a>
+    </div>
+  </footer>
+
+
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+
+</html>

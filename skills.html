@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Skills</title>
+  <style>
+    /* === Root Variables === */
+:root {
+  --bg-light: #f5f5f5;
+  --text-light: #222;
+  --card-light: #ffffff;
+
+  --bg-dark: #121212;
+  --text-dark: #f5f5f5;
+  --card-dark: #1e1e1e;
+
+  --primary: #4e9af1;
+  --accent-color: #4e9af1;
+
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+}
+
+/* === Global Styles === */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* === Navbar === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: var(--card-light);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color var(--transition-speed);
+}
+
+.dark-mode .navbar {
+  background-color: var(--card-dark);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.dark-mode .navbar a {
+  color: var(--text-dark);
+}
+
+.navbar a:hover {
+  color: var(--primary);
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding-left: 0;
+  margin: 0;
+}
+
+
+.nav-buttons {
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+
+.dark-mode #theme-toggle {
+  color: var(--text-dark);
+}
+
+/* === Skills Section === */
+.skills-section {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+  gap: 30px;
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.skill-card {
+  background-color: var(--card-light);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, background-color var(--transition-speed);
+  width: 100%;
+  max-width: 140px;
+  text-align: center;
+}
+
+.dark-mode .skill-card {
+  background-color: var(--card-dark);
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+}
+
+.skill-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--card-light);
+  color: var(--text-light);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.dark-mode footer {
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .skills-section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* === AOS Animation Compatibility === */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 1s;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">👨‍💻 Oman Saakib</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="cerficate.html">My Certificates</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <button id="theme-toggle" class="btn theme-toggle">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="skills-section">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <img src="html.png.png" alt="HTML">
+        <p>HTML</p>
+      </div>
+      <div class="skill-card">
+        <img src="css.png.png" alt="CSS">
+        <p>CSS</p>
+      </div>
+      <div class="skill-card">
+        <img src="javascript.png.png" alt="JavaScript">
+        <p>JavaScript</p>
+      </div>
+      <div class="skill-card">
+        <img src="java.png.png" alt="Java">
+        <p>Java</p>
+      </div>
+      <div class="skill-card">
+        <img src="python.png.png" alt="Python">
+        <p>Python</p>
+      </div>
+      <div class="skill-card">
+        <img src="nodejs.png.png" alt="Node.js">
+        <p>Node.js</p>
+      </div>
+      <div class="skill-card">
+        <img src="mongodb.png.png" alt="MongoDB">
+        <p>MongoDB</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+
+    <p>&copy; 2025 Oman Saakib. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/oman-saakib-7404b0255/" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/codingwithomansaakib" target="_blank">GitHub</a> |
+      <a href="https://www.instagram.com/oman_saakib07/" target="_blank">Instagram</a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('theme-toggle');
+      const body = document.body;
+
+      if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        toggle.textContent = '☀️';
+      }
+
+      toggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        toggle.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    });
+  </script>
+</body>
+</html>
