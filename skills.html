@@ -80,6 +80,7 @@ body {
 .navbar a:hover {
   color: var(--primary);
 }
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -88,6 +89,24 @@ body {
   margin: 0;
 }
 
+/* === Hamburger Button === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-light);
+  transition: 0.3s;
+}
+
+.dark-mode .hamburger span {
+  background-color: var(--text-dark);
+}
 
 .nav-buttons {
   font-size: 18px;
@@ -118,13 +137,12 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 30px;
   justify-items: center;
   max-width: 800px;
   margin: 0 auto;
 }
-
 
 .skill-card {
   background-color: var(--card-light);
@@ -176,8 +194,45 @@ footer {
 @media (max-width: 768px) {
   .skills-section h2 {
     font-size: 2rem;
+    text-align: left; /* Align title to left on mobile */
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr; /* One card per row */
+    gap: 20px;
+    justify-items: start; /* Align cards to left */
+    padding-left: 10px; /* Add some left padding */
+  }
+
+  .skill-card {
+    max-width: none; /* Take full width */
+  }
+
+  .navbar nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--card-light);
+    position: absolute;
+    top: 65px;
+    left: 0;
+    padding: 15px 0;
+    box-shadow: var(--shadow);
+  }
+
+  .dark-mode .navbar nav {
+    background-color: var(--card-dark);
+  }
+
+  .navbar nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }
+
 
 /* === AOS Animation Compatibility === */
 [data-aos] {
@@ -189,8 +244,6 @@ footer {
 [data-aos].aos-animate {
   opacity: 1;
 }
-
-
   </style>
 </head>
 <body>
@@ -198,7 +251,12 @@ footer {
   <header>
     <nav class="navbar">
       <div class="logo">👨‍💻 Oman Saakib</div>
-      <ul class="nav-links">
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -247,7 +305,6 @@ footer {
   </main>
 
   <footer>
-
     <p>&copy; 2025 Oman Saakib. All rights reserved.</p>
     <div class="socials">
       <a href="https://www.linkedin.com/in/oman-saakib-7404b0255/" target="_blank">LinkedIn</a> |
@@ -257,6 +314,7 @@ footer {
   </footer>
 
   <script>
+    // === Dark Mode Toggle ===
     document.addEventListener('DOMContentLoaded', () => {
       const toggle = document.getElementById('theme-toggle');
       const body = document.body;
@@ -273,6 +331,16 @@ footer {
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
       });
     });
+
+    // === Hamburger Menu Toggle ===
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
   </script>
 </body>
 </html>
+
